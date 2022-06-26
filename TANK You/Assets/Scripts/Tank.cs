@@ -5,48 +5,65 @@ using UnityEngine.UI;
 
 public class Tank : MonoBehaviour
 {
-    private float half_screen = Screen.width / 2.0f;
-    private Vector2 current_position;
-    private Vector2 last_position;
+    private GameObject tankWeapon;
+    private bool move_right = false;
+    private bool move_left = false;
 
-    private void Awake()
+    //private Transform pos;
+
+    private void Start()
     {
+        Transform a = gameObject.transform.GetChild(0);
+        tankWeapon = a.gameObject;
         
     }
     private void Update()
     {
-        // Touch Inputs
-        if (Input.touchCount == 1)
+        if (move_left)
         {
-            Touch inputs = Input.GetTouch(0);
-            if (inputs.phase == TouchPhase.Moved)
-            {
-                Debug.Log(inputs.position);
-            }
-
-            //if (inputs.phase == TouchPhase.Began)
-            //{
-            //    last_position = inputs.position;
-            //}
-
-            //if (inputs.phase == TouchPhase.Ended)
-            //{
-            //    current_position = inputs.position;
-
-            //}
-
-            //if (inputs.phase == TouchPhase.Moved)
-            //{
-            //    Debug.Log(inputs.position);
-            //    Vector2 current_position = inputs.position;
-
-            //    float z = (current_position.x - last_position.x)/half_screen * 90;
-
-            //    // Move the Tank's weapon
-            //    gameObject.transform.GetChild(0).Rotate( 0f, 0f, z, Space.Self);
-            //}
+            ToTheLeft();
         }
+        if (move_right)
+        {
+            ToTheRight();
+        }
+
     }
+
+    private void ToTheLeft()
+    {
+        if (tankWeapon.transform.rotation.z >= 0.3) { return; }
+        tankWeapon.transform.Rotate(Vector3.forward, GameManager.Instance.sensitivity);
+    }
+
+    private void ToTheRight()
+    {
+        if (tankWeapon.transform.rotation.z <= -0.3) { return; }
+        tankWeapon.transform.Rotate(Vector3.forward, GameManager.Instance.sensitivity * (-1));
+    }
+
+    // Controller
+    public void PressLeft()
+    {
+        move_left = true;
+        //ToTheLeft();
+    }
+    public void PressRight() 
+    {
+        move_right = true;
+        //ToTheRight();
+    }
+    public void UnPressLeft()
+    {
+        move_left = false;
+        Debug.Log( tankWeapon.transform.rotation.z * 180 + "Derajat");
+    }
+    public void UnPressRight()
+    {
+        move_right = false;
+        Debug.Log(tankWeapon.transform.rotation.z * 180 + "Derajat");
+    }
+
 
     // When get hit
     private void OnCollisionEnter2D(Collision2D other)

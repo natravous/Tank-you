@@ -5,7 +5,10 @@ using UnityEngine;
 public class TankWeapon : MonoBehaviour
 {
 
-
+    private void Update()
+    {
+        transform.Translate(0, GameManager.Instance.shoot_velocity, 0);
+    }
     // Trigger with world borders
     private void OnTriggerEnter2D(Collider2D trigger)
     {
@@ -13,6 +16,13 @@ public class TankWeapon : MonoBehaviour
         if (trigger.gameObject.CompareTag("World Border"))
         {
             Destroy(this.gameObject);
+        }
+
+        if (trigger.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("POIN");
+            Destroy(this.gameObject);
+            Destroy(trigger.gameObject);
         }
     }
 }

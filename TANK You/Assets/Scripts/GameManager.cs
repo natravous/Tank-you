@@ -15,10 +15,15 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public int initial_enemies = 2;
+
     public int score = 0; // Increase when player destroy enemy
     public float shoot_speed = .8f; // Shoots per second
+    public float shoot_velocity = .05f;
+    public float sensitivity = 1; // Move sensitivity
 
     public TextMesh scoreboard;
+
 
     // Add Score
     public void AddScores(int score_to_add)
@@ -43,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         // Game over
+        Debug.Log("GAME OVER");
     }
 
 }

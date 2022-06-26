@@ -4,24 +4,35 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+
+    private Vector3 target;
+    private float self_gacha;
+
+    private void Start()
     {
-        
+        target = new Vector3(Random.Range(-1.0f, 1.0f), -6, 1);
+        self_gacha = Random.Range(.1f, .5f);
+
+    }
+    // Enemy movement
+    private void Update()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, target, self_gacha * 
+            GameManager.Instance.shoot_velocity);
     }
 
     // If being shooted
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D trigger)
     {
-        // Collide with Player's weapon
-        if (other.gameObject.CompareTag("Player Weapon"))
+        // If exeeds the world borders, then destroy
+        if (trigger.gameObject.CompareTag("World Border"))
         {
-
-            // Explode Animation
-            // <The code>
-
-            // Destroy Object
             Destroy(this.gameObject);
+        }
+
+        if (trigger.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.GameOver();
         }
     }
 }
