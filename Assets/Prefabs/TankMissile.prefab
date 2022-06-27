@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7582139275340352503}
   - component: {fileID: 6991908420709338511}
   m_Layer: 0
-  m_Name: Tank_Weapon
+  m_Name: TankMissile
   m_TagString: Player Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
