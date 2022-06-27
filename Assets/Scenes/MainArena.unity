@@ -385,7 +385,7 @@ GameObject:
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -410,7 +410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387022607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.41, z: 0}
+  m_LocalPosition: {x: 0, y: 7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -446,7 +446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854642000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.3997, z: 0}
+  m_LocalPosition: {x: 0, y: -4.5, z: 0}
   m_LocalScale: {x: 3.0638583, y: 2.8279788, z: 1}
   m_Children: []
   m_Father: {fileID: 1555649871}
@@ -532,15 +532,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec080d6622bde1b4a958b6b37697d0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initial_enemies: 5
+  initial_enemies: 1
   scoreboard: {fileID: 0}
   score: 0
-  shoot_speed: 0.8
+  shoot_speed: 0.5
   shoot_velocity: 0.2
   sensitivity: 1.5
   maximum_shoot_angle: 35
+  tank_position: {fileID: 606350491}
   enemy_spd: 0.05
-  spawner_cd: 10
+  spawner_cd: 5
 --- !u!4 &983599292
 Transform:
   m_ObjectHideFlags: 0
@@ -549,11 +550,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983599290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.0575085, y: -1.4805036, z: -0.56602967}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994033053
 GameObject:
@@ -820,8 +821,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 5.7107563, y: -5.981351}
-  - {x: -6.0375576, y: -5.9938903}
+  - {x: 5.7107563, y: -3.981351}
+  - {x: -6.0375576, y: -3.9938903}
   - {x: -5.9825745, y: 9.011065}
   - {x: 6.0115395, y: 9.014257}
   - {x: 6, y: -6}
@@ -841,7 +842,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149716149
 GameObject:
@@ -855,7 +856,7 @@ GameObject:
   m_Layer: 0
   m_Name: PivotPointWeapon
   m_TagString: Player
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -919,7 +920,7 @@ Transform:
   - {fileID: 1149716150}
   - {fileID: 854642001}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1555649872
 Rigidbody2D:
@@ -1039,6 +1040,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8628474589567094892, guid: c61b0d4eea324ab47a32dc54725821d7, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8628474589567094892, guid: c61b0d4eea324ab47a32dc54725821d7, type: 3}
       propertyPath: m_Name
       value: Tank_Atas

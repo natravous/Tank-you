@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        target = new Vector3(Random.Range(-1.0f, 1.0f), -6, 1);
+        //target = new Vector3(Random.Range(-1.0f, 1.0f), -6, 1);
+        target = new Vector3(Random.Range(-1.0f, 1.0f), GameManager.Instance.tank_position.transform.position.y, 1);
         self_gacha = Random.Range(.1f, .5f);
 
     }
