@@ -19,6 +19,7 @@ public class TankWeapon : MonoBehaviour
 
         if (trigger.gameObject.CompareTag("Enemy"))
         {
+            GameManager.Instance.AddScores(1);
             Destroy(trigger.gameObject);
             Destroy(this.gameObject);
         }

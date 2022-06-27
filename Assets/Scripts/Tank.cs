@@ -9,15 +9,18 @@ public class Tank : MonoBehaviour
     private bool move_right = false;
     private bool move_left = false;
     private float limit;
-
+    private bool activate_helper;
+    [SerializeField]
+    private GameObject helper;
     //private Transform pos;
 
     private void Start()
     {
-        Transform a = gameObject.transform.GetChild(0);
-        tankWeapon = a.gameObject;
+        tankWeapon = gameObject.transform.GetChild(0).gameObject;
         limit = GameManager.Instance.maximum_shoot_angle;
-        
+        activate_helper = GameManager.Instance.activate_helper;
+
+        helper.SetActive(activate_helper);
     }
     private void Update()
     {
