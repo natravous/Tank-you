@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("Serang", 1, 5);
+        InvokeRepeating("Serang", 1, GameManager.Instance.spawner_cd);
     }
 
     private void Serang()

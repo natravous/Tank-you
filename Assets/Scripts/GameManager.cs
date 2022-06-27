@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Instance
+  // Instance
   public static GameManager Instance { get; private set; }
-
+    // Init
     private void Awake()
     {
         if (Instance == null) { Instance = this; }
@@ -15,23 +13,38 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public int initial_enemies = 2;
+    /** 
+     * =================
+     * Global Variables
+     * =================
+     */
 
+    // Game Stats
+    public int initial_enemies = 2;  // Enemies per one spawn
+    public TextMesh scoreboard; // Scoreboard
+
+    // Player (Tank) Stats
     public int score = 0; // Increase when player destroy enemy
     public float shoot_speed = .8f; // Shoots per second
-    public float shoot_velocity = .05f;
-    public float sensitivity = 1; // Move sensitivity
+    public float shoot_velocity = .1f; // Speeds of a shoot
+    public float sensitivity = 1.0f; // Move sensitivity
+    public float maximum_shoot_angle = 0.35f; // Rotation limitation (in z rotation)
 
-    public TextMesh scoreboard;
+    // Enemy Stats
+    public float enemy_spd = .05f; // Enemy speed [scaled once more in instantiate]
+    public float spawner_cd = 2.0f; // Cooldown for enemy spawner
+    
+    /**
+     * ================
+     * Global Functions
+     * ================
+     */
 
-
-    // Add Score
+    // Add Score to user stats and refresh scoreboard
     public void AddScores(int score_to_add)
     {
-        // increase score
-        score += score_to_add;
-        // change score text
-        scoreboard.text = AddZeros();
+        score += score_to_add; // Add (n) to user score
+        scoreboard.text = AddZeros(); // Convert based on template before change scoreboard
     }
 
     public string AddZeros()
@@ -49,6 +62,7 @@ public class GameManager : MonoBehaviour
     {
         // Game over
         Debug.Log("GAME OVER");
+        Application.Quit();
     }
 
 }

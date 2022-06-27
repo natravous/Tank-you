@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, self_gacha * 
-            GameManager.Instance.shoot_velocity);
+            GameManager.Instance.enemy_spd);
     }
 
     // If being shooted
@@ -29,10 +29,6 @@ public class Enemy : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        if (trigger.gameObject.CompareTag("Player"))
-        {
-            GameManager.Instance.GameOver();
-        }
     }
+
 }

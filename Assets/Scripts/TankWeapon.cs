@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TankWeapon : MonoBehaviour
 {
-
+    // This is Bullet properties
     private void Update()
     {
+        // Move towards Y axis
         transform.Translate(0, GameManager.Instance.shoot_velocity, 0);
     }
-    // Trigger with world borders
+
     private void OnTriggerEnter2D(Collider2D trigger)
     {
         // If exeeds the world borders, then destroy
@@ -17,12 +16,13 @@ public class TankWeapon : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        if (trigger.gameObject.CompareTag("Enemy"))
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("POIN");
+            Destroy(collision.gameObject);
             Destroy(this.gameObject);
-            Destroy(trigger.gameObject);
         }
     }
 }

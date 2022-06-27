@@ -8,6 +8,7 @@ public class Tank : MonoBehaviour
     private GameObject tankWeapon;
     private bool move_right = false;
     private bool move_left = false;
+    private float limit;
 
     //private Transform pos;
 
@@ -15,6 +16,7 @@ public class Tank : MonoBehaviour
     {
         Transform a = gameObject.transform.GetChild(0);
         tankWeapon = a.gameObject;
+        limit = GameManager.Instance.maximum_shoot_angle;
         
     }
     private void Update()
@@ -32,13 +34,13 @@ public class Tank : MonoBehaviour
 
     private void ToTheLeft()
     {
-        if (tankWeapon.transform.rotation.z >= 0.3) { return; }
+        if (tankWeapon.transform.rotation.z >= limit) { return; }
         tankWeapon.transform.Rotate(Vector3.forward, GameManager.Instance.sensitivity);
     }
 
     private void ToTheRight()
     {
-        if (tankWeapon.transform.rotation.z <= -0.3) { return; }
+        if (tankWeapon.transform.rotation.z <= -limit) { return; }
         tankWeapon.transform.Rotate(Vector3.forward, GameManager.Instance.sensitivity * (-1));
     }
 
@@ -56,12 +58,10 @@ public class Tank : MonoBehaviour
     public void UnPressLeft()
     {
         move_left = false;
-        Debug.Log( tankWeapon.transform.rotation.z * 180 + "Derajat");
     }
     public void UnPressRight()
     {
         move_right = false;
-        Debug.Log(tankWeapon.transform.rotation.z * 180 + "Derajat");
     }
 
 
@@ -71,6 +71,7 @@ public class Tank : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             // Game Over
+            GameManager.Instance.GameOver();
         }
     }
 
