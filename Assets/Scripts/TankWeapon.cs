@@ -16,13 +16,19 @@ public class TankWeapon : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
+
+        if (trigger.gameObject.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject);
+            Destroy(trigger.gameObject);
             Destroy(this.gameObject);
         }
     }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Enemy"))
+    //    {
+    //        Destroy(collision.gameObject);
+    //        Destroy(this.gameObject);
+    //    }
+    //}
 }

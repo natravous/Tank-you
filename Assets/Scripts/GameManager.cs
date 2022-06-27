@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public float shoot_velocity = .1f; // Speeds of a shoot
     public float sensitivity = 1.0f; // Move sensitivity
     public float maximum_shoot_angle = 0.35f; // Rotation limitation (in z rotation)
+    public Transform tank_position;
 
     // Enemy Stats
     public float enemy_spd = .05f; // Enemy speed [scaled once more in instantiate]

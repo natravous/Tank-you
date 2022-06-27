@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc18eacfc1e6cbe4395d5c4819b8d356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet_prefab: {fileID: 0}
 --- !u!1 &6019624246286754091
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7129800762910140814}
   m_Layer: 0
-  m_Name: Tank_Atas
+  m_Name: Tanknozzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
