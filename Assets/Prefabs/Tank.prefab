@@ -41,6 +41,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4312532140706663326}
   - component: {fileID: 4312532140706663327}
+  - component: {fileID: 1169402166536876868}
+  - component: {fileID: 7612439536093330890}
   m_Layer: 0
   m_Name: TankRiffle
   m_TagString: Player Weapon
@@ -115,6 +117,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1169402166536876868
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312532140706663313}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.84999996, y: -1.03}
+      - {x: 0.84999996, y: -0.85999995}
+      - {x: 0.84, y: -0.79999995}
+      - {x: 0.81, y: -0.42}
+      - {x: 0.71999997, y: -0.38}
+      - {x: 0.71, y: 0.12}
+      - {x: 0.63, y: 0.28}
+      - {x: 0.34, y: 0.29}
+      - {x: 0.26999998, y: 0.39}
+      - {x: 0.14, y: 0.35999998}
+      - {x: 0.16, y: 1.5699999}
+      - {x: 0.24, y: 1.62}
+      - {x: 0.28, y: 1.86}
+      - {x: 0.26, y: 1.92}
+      - {x: -0.25, y: 1.92}
+      - {x: -0.28, y: 1.91}
+      - {x: -0.26999998, y: 1.8199999}
+      - {x: -0.22999999, y: 1.62}
+      - {x: -0.16, y: 1.5699999}
+      - {x: -0.14, y: 0.35999998}
+      - {x: -0.26999998, y: 0.38}
+      - {x: -0.35999998, y: 0.29}
+      - {x: -0.63, y: 0.29}
+      - {x: -0.71999997, y: 0.12}
+      - {x: -0.84, y: -0.76}
+      - {x: -0.84999996, y: -0.78999996}
+      - {x: -0.84999996, y: -1.13}
+      - {x: -0.78782034, y: -1.2021136}
+      - {x: -0.7078203, y: -1.2382035}
+      - {x: -0.63083214, y: -1.2182567}
+      - {x: -0.31550863, y: -1.2673584}
+      - {x: -0.015891701, y: -1.1412017}
+      - {x: 0.3286526, y: -1.2934477}
+      - {x: 0.573461, y: -1.2595383}
+      - {x: 0.7526287, y: -1.2182567}
+--- !u!114 &7612439536093330890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312532140706663313}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44536d0d766f46459f7859a8951c75b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4312532140734154793
 GameObject:
   m_ObjectHideFlags: 0
