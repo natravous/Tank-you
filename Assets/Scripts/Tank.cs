@@ -3,10 +3,10 @@ using UnityEngine;
 public class Tank : MonoBehaviour
 {
     private GameObject tankWeapon;
-    private bool move_right = false;
-    private bool move_left = false;
+    private bool moveRight = false;
+    private bool moveLeft = false;
     private float limit;
-    private bool activate_helper;
+    private bool activateHelper;
     [SerializeField]
     private GameObject helper;
     //private Transform pos;
@@ -14,18 +14,18 @@ public class Tank : MonoBehaviour
     private void Start()
     {
         tankWeapon = gameObject.transform.GetChild(0).gameObject;
-        limit = GameManager.Instance.maximum_shoot_angle;
-        activate_helper = GameManager.Instance.activate_helper;
+        limit = GameManager.Instance.maximumShootAngle;
+        activateHelper = GameManager.Instance.activateHelper;
 
-        helper.SetActive(activate_helper);
+        helper.SetActive(activateHelper);
     }
     private void Update()
     {
-        if (move_left)
+        if (moveLeft)
         {
             ToTheLeft();
         }
-        if (move_right)
+        if (moveRight)
         {
             ToTheRight();
         }
@@ -47,21 +47,21 @@ public class Tank : MonoBehaviour
     // Controller
     public void PressLeft()
     {
-        move_left = true;
+        moveLeft = true;
         //ToTheLeft();
     }
     public void PressRight() 
     {
-        move_right = true;
+        moveRight = true;
         //ToTheRight();
     }
     public void UnPressLeft()
     {
-        move_left = false;
+        moveLeft = false;
     }
     public void UnPressRight()
     {
-        move_right = false;
+        moveRight = false;
     }
 
 

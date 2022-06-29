@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4637ef1e280a26f49bed56af511c94f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy_prefab: {fileID: 2519784242257652818, guid: b3ff24d49d14f084fa51e842377cb982, type: 3}
+  enemyPrefab: {fileID: 2519784242257652818, guid: b3ff24d49d14f084fa51e842377cb982, type: 3}
 --- !u!4 &387022609
 Transform:
   m_ObjectHideFlags: 0
@@ -558,17 +558,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec080d6622bde1b4a958b6b37697d0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initial_enemies: 1
+  initialEnemies: 2
   scoreboard: {fileID: 1622016356}
   score: 0
-  shoot_speed: 0.5
-  shoot_velocity: 0.2
+  shootSpeed: 0.8
+  shootVelocity: 0.1
   sensitivity: 1.5
-  maximum_shoot_angle: 0.3
-  tank_position: {fileID: 1789098242}
-  activate_helper: 0
-  enemy_spd: 0.05
-  spawner_cd: 5
+  maximumShootAngle: 0.35
+  tankPosition: {fileID: 1789098242}
+  activateHelper: 1
+  enemySpd: 0.05
+  spawnerCD: 2
 --- !u!4 &983599292
 Transform:
   m_ObjectHideFlags: 0

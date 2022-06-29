@@ -4,20 +4,20 @@ public class Enemy : MonoBehaviour
 {
 
     private Vector3 target;
-    private float self_gacha;
+    private float selfGacha;
 
     private void Start()
     {
         //target = new Vector3(Random.Range(-1.0f, 1.0f), -6, 1);
-        target = new Vector3(Random.Range(-1.0f, 1.0f), GameManager.Instance.tank_position.transform.position.y, 1);
-        self_gacha = Random.Range(.1f, .5f);
+        target = new Vector3(Random.Range(-1.0f, 1.0f), GameManager.Instance.tankPosition.transform.position.y, 1);
+        selfGacha = Random.Range(.1f, .5f);
 
     }
     // Enemy movement
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, self_gacha * 
-            GameManager.Instance.enemy_spd);
+        transform.position = Vector3.MoveTowards(transform.position, target, selfGacha * 
+            GameManager.Instance.enemySpd);
     }
 
     // If being shooted

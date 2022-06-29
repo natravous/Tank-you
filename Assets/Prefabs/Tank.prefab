@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf18e3bb0c57524d8f10fa88450c8a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object_to_rotate: {fileID: 4090719945238388916}
+  objectToRotate: {fileID: 4090719945238388916}
 --- !u!1 &4312532140734154793
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc18eacfc1e6cbe4395d5c4819b8d356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet_prefab: {fileID: 6771410927437074132, guid: 54864afd5f648064cb9349e406636f21, type: 3}
+  bulletPrefab: {fileID: 6771410927437074132, guid: 54864afd5f648064cb9349e406636f21, type: 3}
 --- !u!1 &4312532141430445814
 GameObject:
   m_ObjectHideFlags: 0

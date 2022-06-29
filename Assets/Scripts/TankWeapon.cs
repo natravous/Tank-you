@@ -6,7 +6,7 @@ public class TankWeapon : MonoBehaviour
     private void Update()
     {
         // Move towards Y axis
-        transform.Translate(0, GameManager.Instance.shoot_velocity, 0);
+        transform.Translate(0, GameManager.Instance.shootVelocity, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
@@ -24,12 +24,4 @@ public class TankWeapon : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Enemy"))
-    //    {
-    //        Destroy(collision.gameObject);
-    //        Destroy(this.gameObject);
-    //    }
-    //}
 }
