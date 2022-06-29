@@ -22,7 +22,9 @@ public class Enemy : MonoBehaviour
         if (trigger.gameObject.CompareTag("World Border"))
         {
             Destroy(this.gameObject);
+            return;
         }
+
     }
 
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TankWeapon : MonoBehaviour
 {
+    public ParticleSystem boom;
     // This is Bullet properties
     private void Update()
     {
@@ -28,6 +29,7 @@ public class TankWeapon : MonoBehaviour
         if (trigger.gameObject.CompareTag("Enemy"))
         {
             GameManager.Instance.AddScores(1);
+            Instantiate(boom, transform.position, Quaternion.identity);
             Destroy(trigger.gameObject);
             Destroy(this.gameObject);
             return;
