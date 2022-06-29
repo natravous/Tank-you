@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994536155008543503}
   - component: {fileID: 7313634849805451275}
-  - component: {fileID: 7582139275340352503}
+  - component: {fileID: 2959421538503883687}
   - component: {fileID: 6991908420709338511}
   m_Layer: 0
   m_Name: TankMissile
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 6771410927437074132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.75750005, z: 1}
   m_Children:
   - {fileID: 5125830335969569914}
   m_Father: {fileID: 0}
@@ -132,7 +132,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!50 &7582139275340352503
+--- !u!50 &2959421538503883687
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
