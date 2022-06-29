@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     // Game Stats
     public int initialEnemies = 2;  // Enemies per one spawn
     public GameObject scoreboard; // Scoreboard
+    public int multiplier = 0;
 
     // Player (Tank) Stats
     public int score = 0; // Increase when player destroy enemy

@@ -410,11 +410,66 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387022607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.5, z: 0}
+  m_LocalPosition: {x: 0, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &679374698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 679374700}
+  - component: {fileID: 679374699}
+  m_Layer: 0
+  m_Name: Barier
+  m_TagString: Barier
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!68 &679374699
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679374698}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.820941, y: -1.7060139}
+  - {x: -2.8263078, y: 0}
+  - {x: 2.8561056, y: 0.027461052}
+  - {x: 2.8445892, y: -2.1114247}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!4 &679374700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679374698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &742390613
 GameObject:
@@ -558,17 +613,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec080d6622bde1b4a958b6b37697d0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialEnemies: 2
+  initialEnemies: 1
   scoreboard: {fileID: 1622016356}
+  multiplier: 1
   score: 0
-  shootSpeed: 0.8
+  shootSpeed: 1
   shootVelocity: 0.1
   sensitivity: 1.5
   maximumShootAngle: 0.35
   tankPosition: {fileID: 1789098242}
   activateHelper: 1
-  enemySpd: 0.05
-  spawnerCD: 2
+  enemySpd: 0.04
+  spawnerCD: 5
 --- !u!4 &983599292
 Transform:
   m_ObjectHideFlags: 0
@@ -848,11 +904,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 5.7107563, y: -6.481351}
-  - {x: -6.0375576, y: -6.4938903}
-  - {x: -5.9825745, y: 9.011065}
-  - {x: 6.0115395, y: 9.014257}
-  - {x: 6, y: -6}
+  - {x: -4.888733, y: 7.9806585}
+  - {x: -4.845911, y: -6.0623937}
+  - {x: 5.056834, y: -6.0250072}
+  - {x: 5.020652, y: 7.800857}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

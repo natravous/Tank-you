@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Player Weapon
   - World Border
+  - Barier
   layers:
   - Default
   - TransparentFX

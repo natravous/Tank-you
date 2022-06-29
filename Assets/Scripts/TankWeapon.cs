@@ -6,7 +6,8 @@ public class TankWeapon : MonoBehaviour
     private void Update()
     {
         // Move towards Y axis
-        transform.Translate(0, GameManager.Instance.shootVelocity, 0);
+        transform.Translate(0, GameManager.Instance.shootVelocity + 
+            (GameManager.Instance.multiplier * 0.0005f), 0);
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
@@ -15,6 +16,13 @@ public class TankWeapon : MonoBehaviour
         if (trigger.gameObject.CompareTag("World Border"))
         {
             Destroy(this.gameObject);
+            return;
+        }
+
+        if (trigger.gameObject.CompareTag("Barier"))
+        {
+            Destroy(this.gameObject);
+            return;
         }
 
         if (trigger.gameObject.CompareTag("Enemy"))
@@ -22,6 +30,7 @@ public class TankWeapon : MonoBehaviour
             GameManager.Instance.AddScores(1);
             Destroy(trigger.gameObject);
             Destroy(this.gameObject);
+            return;
         }
     }
 }
