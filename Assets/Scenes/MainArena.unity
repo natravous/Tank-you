@@ -562,7 +562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &800855967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -617,9 +617,9 @@ MonoBehaviour:
   scoreboard: {fileID: 1622016356}
   multiplier: 1
   score: 0
-  shootSpeed: 1
+  shootSpeed: 0.8
   shootVelocity: 0.1
-  sensitivity: 1.5
+  sensitivity: 1
   maximumShootAngle: 0.35
   tankPosition: {fileID: 1789098242}
   activateHelper: 1
@@ -979,6 +979,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4312532141430445815, guid: c43ac6fb2ed8a2d4cbe8097ad9570951, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454900380193044298, guid: c43ac6fb2ed8a2d4cbe8097ad9570951, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

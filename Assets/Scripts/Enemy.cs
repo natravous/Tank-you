@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         transform.Translate(0, GameManager.Instance.enemySpd * selfGacha, 0);
+        transform.Rotate(new Vector3(0, 0, 1));
     }
 
     // If being shooted

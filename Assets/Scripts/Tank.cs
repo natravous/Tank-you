@@ -19,7 +19,7 @@ public class Tank : MonoBehaviour
 
         helper.SetActive(activateHelper);
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (moveLeft)
         {
@@ -35,7 +35,7 @@ public class Tank : MonoBehaviour
     private void ToTheLeft()
     {
         if (tankWeapon.transform.rotation.z >= limit) { return; }
-        tankWeapon.transform.Rotate(Vector3.forward, GameManager.Instance.sensitivity);
+        tankWeapon.transform.Rotate(Vector3.forward, GameManager.Instance.sensitivity );
     }
 
     private void ToTheRight()
