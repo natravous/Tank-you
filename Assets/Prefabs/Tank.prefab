@@ -41,6 +41,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4312532140706663326}
   - component: {fileID: 4312532140706663327}
+  - component: {fileID: 4116974915378480162}
+  - component: {fileID: 6454900380193044298}
   m_Layer: 0
   m_Name: TankRiffle
   m_TagString: Player Weapon
@@ -115,6 +117,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4116974915378480162
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312532140706663313}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.5283681}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5572877, y: 8.169439}
+  m_EdgeRadius: 0
+--- !u!114 &6454900380193044298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312532140706663313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf18e3bb0c57524d8f10fa88450c8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  object_to_rotate: {fileID: 4090719945238388916}
 --- !u!1 &4312532140734154793
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209019497e87f714b8f55a1330479cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  helper: {fileID: 0}
+  helper: {fileID: 8007119649543444212}
 --- !u!1 &4312532142007653495
 GameObject:
   m_ObjectHideFlags: 0
