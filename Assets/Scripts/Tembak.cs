@@ -20,8 +20,6 @@ public class Tembak : MonoBehaviour
     private void Duar()
     {
         riffleAnimation.SetBool("isShoot", true);
-        riffleAnimation.SetFloat("shootSpeed", shootSpeed);
-
         tankAnimation.SetBool("isShoot", true);
 
         // Get the angle of shooting
