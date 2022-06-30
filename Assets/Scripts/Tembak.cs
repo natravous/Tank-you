@@ -6,6 +6,9 @@ public class Tembak : MonoBehaviour
     [SerializeField]
     private GameObject bulletPrefab;
 
+    public Animator riffleAnimation;
+    public Animator bodyAnimation;
+
     private void Start()
     {
         shootSpeed = GameManager.Instance.shootSpeed;
@@ -16,6 +19,9 @@ public class Tembak : MonoBehaviour
 
     private void Duar()
     {
+        riffleAnimation.SetBool("isShoot", true);
+        bodyAnimation.SetBool("isShoot", true);
+
         // Get the angle of shooting
         // From its parent's rotation
         Quaternion parentRot = gameObject.transform.parent.transform.rotation;
