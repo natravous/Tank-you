@@ -27,6 +27,7 @@ public class Spawner : MonoBehaviour
         }
         if ( enemies >= 6) 
         {
+            if (GameManager.Instance.multiplier >= 10) { return; }
             GameManager.Instance.multiplier++;
             return; 
         }
