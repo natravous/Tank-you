@@ -123,6 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &12862654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4312532142007653495, guid: c43ac6fb2ed8a2d4cbe8097ad9570951, type: 3}
+  m_PrefabInstance: {fileID: 1304302934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &12862659
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12862654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48baf65cf435c7d4cbc4ebed3dfcd2f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &119510663
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +440,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &404917918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4312532140706663313, guid: c43ac6fb2ed8a2d4cbe8097ad9570951, type: 3}
+  m_PrefabInstance: {fileID: 1304302934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &404917923
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404917918}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9eb7cf9e86550e4b98ccafc1d765979, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &742390613
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &800855967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -878,6 +926,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4312532140734154775, guid: c43ac6fb2ed8a2d4cbe8097ad9570951, type: 3}
+      propertyPath: tankAnimation
+      value: 
+      objectReference: {fileID: 12862659}
+    - target: {fileID: 4312532140734154775, guid: c43ac6fb2ed8a2d4cbe8097ad9570951, type: 3}
+      propertyPath: riffleAnimation
+      value: 
+      objectReference: {fileID: 404917923}
     - target: {fileID: 4312532141430445814, guid: c43ac6fb2ed8a2d4cbe8097ad9570951, type: 3}
       propertyPath: m_Name
       value: Tank
@@ -924,6 +980,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4312532141430445815, guid: c43ac6fb2ed8a2d4cbe8097ad9570951, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454900380193044298, guid: c43ac6fb2ed8a2d4cbe8097ad9570951, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
