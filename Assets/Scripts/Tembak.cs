@@ -19,6 +19,7 @@ public class Tembak : MonoBehaviour
 
     private void Duar()
     {
+        // Tank Animation
         riffleAnimation.SetBool("isShoot", true);
         tankAnimation.SetBool("isShoot", true);
 
