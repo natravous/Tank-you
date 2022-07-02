@@ -12,7 +12,8 @@ public class Enemy : MonoBehaviour
     // Enemy movement
     private void Update()
     {
-        transform.Translate(0, GameManager.Instance.enemySpd * selfGacha, 0);
+        transform.Translate(0, GameManager.Instance.enemySpd * selfGacha * Time.deltaTime, 0); // add delta time so enmmy can stop moving when game paused
+        Debug.Log(Time.deltaTime); //0.0005f
     }
 
     // If being shooted
