@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         transform.Translate(0, GameManager.Instance.enemySpd * selfGacha * Time.deltaTime, 0); // add delta time so enmmy can stop moving when game paused
-        Debug.Log(Time.deltaTime); //0.0005f
+        //Debug.Log(Time.deltaTime); //0.0005f
     }
 
     // If being shooted
@@ -24,6 +24,15 @@ public class Enemy : MonoBehaviour
         {
             Destroy(this.gameObject);
             return;
+        }
+
+        // game over
+        if (trigger.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Game Over");
+            MenuManager.Instance.gameOverPanel.SetActive(true);
+            Time.timeScale = 0;
+            MenuManager.Instance.state = MenuManager.State.Menu;
         }
 
     }
